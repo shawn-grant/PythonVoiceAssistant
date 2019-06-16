@@ -13,6 +13,7 @@ Python voice assistant using OpenCV and excel
 - Send messages
 - send emails
 
-### Pip Modules
-pip install:
-*openpyxl
+### Pip Modules Used
+- opencv-python
+- openpyxl
+- turtle
