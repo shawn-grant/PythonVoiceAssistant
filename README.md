@@ -1,5 +1,6 @@
 # Python Voice Assistant
 Python voice assistant using OpenCV and excel
+  - In development
 
 ## Features
 - Voice Recognition
@@ -17,3 +18,4 @@ Python voice assistant using OpenCV and excel
 - opencv-python
 - openpyxl
 - turtle
+- pyttsx3
