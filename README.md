@@ -5,6 +5,7 @@ Python voice assistant using OpenCV and excel
 - Voice Recognition
 - Face Detection
 - Text Recognition
+- Customize name and voice
 
 ## Available Commands
 - General conversation (limited)
