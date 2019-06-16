@@ -12,3 +12,7 @@ Python voice assistant using OpenCV and excel
 - Set alarms/ reminders
 - Send messages
 - send emails
+
+### Pip Modules
+pip install:
+*openpyxl
