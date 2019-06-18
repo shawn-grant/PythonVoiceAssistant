@@ -1,6 +1,7 @@
 # Python Voice Assistant
 Python voice assistant using OpenCV and excel
-  - In development
+
+- Written in Python 3.6
 
 ## Features
 - Voice Recognition
@@ -17,5 +18,6 @@ Python voice assistant using OpenCV and excel
 ### Pip Modules Used
 - opencv-python
 - openpyxl
-- turtle
 - pyttsx3
+- speechrecognition
+- numpy
