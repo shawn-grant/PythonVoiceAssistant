@@ -17,7 +17,9 @@ Python voice assistant using OpenCV and excel
 
 ### Pip Modules Used
 - opencv-python
+- opencv-contrib-python
 - openpyxl
+- pillow
 - pyttsx3
 - speechrecognition
 - numpy
