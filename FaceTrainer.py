@@ -6,8 +6,8 @@ import os
 # Path for face image database
 path = 'dataset'
 
-if not os.path.exists(path):
-    os.makedirs(path)
+if not os.path.exists("trainer"):
+    os.makedirs("trainer")
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 detector = cv2.CascadeClassifier("Cascades/haarcascade_frontalface_default.xml")

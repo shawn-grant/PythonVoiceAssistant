@@ -1,6 +1,9 @@
 import cv2
 import os
 
+if not os.path.exists("dataset"):
+    os.makedirs("dataset")
+
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) # set video width
 cam.set(4, 480) # set video height
@@ -29,8 +32,8 @@ while(True):
         # Save the captured image into the datasets folder
         cv2.imwrite("dataset/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
         print("\nImage " + str(count) + " Added.")
-        cv2.imshow('image', img)
-
+        
+    cv2.imshow('image', img)
     k = cv2.waitKey(100) & 0xff # Press 'ESC' for exiting video
     if k == 27:
         break
