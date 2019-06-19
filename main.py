@@ -3,7 +3,7 @@ import openpyxl
 import threading
 from subprocess import call
 import VoiceRecognizer
-import FaceDetect
+import FaceRecognizer
 
 if not os.path.exists("Data"):
     os.makedirs("Data")
@@ -13,7 +13,7 @@ try:
     vr = threading.Thread(target=VoiceRecognizer.startListening)
     vr.start()
 
-    fd = threading.Thread(target=FaceDetect.startDetection)
+    fd = threading.Thread(target=FaceRecognizer.startRecognition)
     fd.start()
 except:
    print ("Error: unable to start one or more threads")
