@@ -1,6 +1,6 @@
 # Python Voice Assistant
 Python voice assistant using OpenCV and excel
-
+- in development
 - Written in Python 3.6
 
 ## Features
@@ -21,3 +21,4 @@ Python voice assistant using OpenCV and excel
 - pyttsx3
 - speechrecognition
 - numpy
+- threading

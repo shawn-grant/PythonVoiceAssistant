@@ -1,52 +1,21 @@
 import os
-import pyttsx3
 import openpyxl
-import speech_recognition as sr
+import threading
+from subprocess import call
+import VoiceRecognizer
+import FaceDetect
 
 if not os.path.exists("Data"):
     os.makedirs("Data")
 
-#TTS variables
-tts = pyttsx3.init()
-voices = tts.getProperty('voices')
-tts.setProperty('voice', voices[1])
-#Voice Recognition
-rec = sr.Recognizer()
+#RUN FACE DETECTION AND VOICE RECOGNITION SIMULTANEOUSLY
+try:
+    vr = threading.Thread(target=VoiceRecognizer.startListening)
+    vr.start()
 
-#print available voices
-def printVoices():
-    for voice in voices:
-        print (voice.id)
+    fd = threading.Thread(target=FaceDetect.startDetection)
+    fd.start()
+except:
+   print ("Error: unable to start one or more threads")
 
-printVoices()
-
-def listenToUser():
-    tts.say("I'm listening")
-    tts.runAndWait()
-
-    with sr.Microphone() as source:
-        audio = rec.listen(source)
-
-        try:
-            print("recognizing text ....")
-            text = rec.recognize_google(audio, language = "en-US")
-            return text
-        except:
-            print("CANT UNDERSTAND YOU")
-            tts.say("Sorry I couldn't catch that, please repeat")
-            tts.runAndWait()
-            listenToUser()
-
-#Files
-userFile = open("Data/user.dat", "w+")
-
-'''if str(userFile.read()) == "":
-    name = input("Name: ")
-    userFile.write(name)
-
-tts.say('Welcome '+ name)
-tts.runAndWait()'''
-
-response = listenToUser()
-tts.say("you said, " + response)
-tts.runAndWait()
+call(["python", "VoiceOutput.py", "Welcome, what can I help you with?"])
