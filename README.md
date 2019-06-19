@@ -23,4 +23,5 @@ Python voice assistant using OpenCV and excel
 - pyttsx3
 - speechrecognition
 - numpy
+- matplotlib
 - threading

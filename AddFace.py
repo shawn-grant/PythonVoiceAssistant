@@ -33,7 +33,7 @@ while(True):
         cv2.imwrite("dataset/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
         print("\nImage " + str(count) + " Added.")
         
-    cv2.imshow('image', img)
+    cv2.imshow('Add face data', img)
     k = cv2.waitKey(100) & 0xff # Press 'ESC' for exiting video
     if k == 27:
         break
